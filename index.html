@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ma carte de visite</title>
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer type="text/javascript" src="script.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div id="card" :class="card">
+            <div class=top-left>
+                <p>{{prenom}} {{nom}}</p>
+                <p>{{poste}}</p>
+                <p>{{entreprise}}</p>
+            </div>
+
+            <div class=bot-right>
+                <p>{{adresse}}</p>
+                <p>{{phone}}</p>
+                <p>{{email}}</p>
+            </div>
+        </div>
+        <div class="bouttons">
+            <button class="blackButton" @click="black">Black</button>
+            <button class="redButton" @click="red">Red</button>
+            <button class="yellowButton" @click="yellow">Yellow</button>
+        </div>
+
+        <div class="formulaire">
+            <form action="#">
+
+                <label for="prenom">Prénom :</label><br>
+                <input @input="saisiePrenom" type="text" id="prenom" placeholder="Votre prénom"><br>
+
+                <label for="nom">Nom :</label><br>
+                <input @input="saisieNom" type="text" id="nom" placeholder="Votre nom"><br>
+
+                <label for="poste">Poste :</label><br>
+                <input @input="saisiePoste" type="text" id="poste" placeholder="Votre poste"><br>
+
+                <label for="company">Entreprise :</label><br>
+                <input @input="saisieEntreprise" type="text" id="company" placeholder="Nom de l'entreprise"><br>
+
+                <label for="adresse">Adresse :</label><br>
+                <input @input="saisieAdresse" type="text" id="adresse" placeholder="Votre adresse"><br>
+
+                <label for="phone">Téléphone :</label><br>
+                <input @input="saisiePhone" type="text" id="phone" placeholder="Votre numéro de téléphone"><br>
+
+                <label for="email">Email :</label><br>
+                <input @input="saisieEmail" type="text" id="email" placeholder="Votre adresse email"><br>
+                
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
